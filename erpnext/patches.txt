@@ -1,10 +1,10 @@
 [pre_model_sync]
-erpnext.patches.v12_0.update_is_cancelled_field
+
 erpnext.patches.v11_0.rename_production_order_to_work_order
 erpnext.patches.v13_0.add_bin_unique_constraint
 erpnext.patches.v11_0.refactor_naming_series
 erpnext.patches.v11_0.refactor_autoname_naming
-erpnext.patches.v14_0.change_is_subcontracted_fieldtype
+
 execute:frappe.reload_doc("accounts", "doctype", "POS Payment Method") #2020-05-28
 erpnext.patches.v4_2.update_requested_and_ordered_qty #2021-03-31
 erpnext.patches.v5_7.update_item_description_based_on_item_master
@@ -128,7 +128,7 @@ erpnext.patches.v12_0.rename_bank_reconciliation_fields # 2020-01-22
 erpnext.patches.v12_0.set_purchase_receipt_delivery_note_detail
 erpnext.patches.v12_0.add_permission_in_lower_deduction
 erpnext.patches.v12_0.set_received_qty_in_material_request_as_per_stock_uom
-erpnext.patches.v12_0.rename_account_type_doctype
+
 erpnext.patches.v12_0.recalculate_requested_qty_in_bin
 erpnext.patches.v12_0.set_total_batch_quantity
 erpnext.patches.v12_0.rename_mws_settings_fields
@@ -139,7 +139,7 @@ erpnext.patches.v12_0.fix_quotation_expired_status
 erpnext.patches.v12_0.rename_pos_closing_doctype
 erpnext.patches.v13_0.replace_pos_payment_mode_table #2020-12-29
 execute:frappe.delete_doc_if_exists("Page", "appointment-analytic")
-execute:frappe.rename_doc("Desk Page", "Getting Started", "Home", force=True)
+
 erpnext.patches.v12_0.unset_customer_supplier_based_on_type_of_item_price
 erpnext.patches.v12_0.set_valid_till_date_in_supplier_quotation
 erpnext.patches.v12_0.set_serial_no_status #2020-05-21
@@ -151,7 +151,7 @@ erpnext.patches.v13_0.update_actual_start_and_end_date_in_wo
 erpnext.patches.v12_0.update_bom_in_so_mr
 execute:frappe.delete_doc("Report", "Department Analytics")
 erpnext.patches.v12_0.update_uom_conversion_factor
-erpnext.patches.v13_0.replace_pos_page_with_point_of_sale_page
+
 erpnext.patches.v13_0.delete_old_purchase_reports
 erpnext.patches.v12_0.set_italian_import_supplier_invoice_permissions
 erpnext.patches.v13_0.update_subscription
@@ -175,10 +175,10 @@ erpnext.patches.v13_0.rename_issue_doctype_fields
 erpnext.patches.v13_0.change_default_pos_print_format
 erpnext.patches.v13_0.set_youtube_video_id
 erpnext.patches.v13_0.set_app_name
-erpnext.patches.v13_0.print_uom_after_quantity_patch
+
 erpnext.patches.v13_0.set_payment_channel_in_payment_gateway_account
 execute:frappe.delete_doc("Report", "Quoted Item Comparison")
-erpnext.patches.v13_0.update_member_email_address
+
 erpnext.patches.v13_0.update_pos_closing_entry_in_merge_log
 erpnext.patches.v13_0.add_po_to_global_search
 erpnext.patches.v13_0.update_returned_qty_in_pr_dn
@@ -256,8 +256,8 @@ erpnext.patches.v14_0.update_reference_due_date_in_journal_entry
 erpnext.patches.v15_0.saudi_depreciation_warning
 erpnext.patches.v15_0.delete_saudi_doctypes
 erpnext.patches.v14_0.show_loan_management_deprecation_warning
-erpnext.patches.v14_0.clear_reconciliation_values_from_singles
-execute:frappe.rename_doc("Report", "TDS Payable Monthly", "Tax Withholding Details", force=True)
+
+
 erpnext.patches.v14_0.update_proprietorship_to_individual
 erpnext.patches.v15_0.rename_subcontracting_fields
 erpnext.patches.v15_0.unset_incorrect_additional_discount_percentage
@@ -397,7 +397,7 @@ erpnext.patches.v15_0.update_cc_in_process_statement_of_accounts
 erpnext.patches.v15_0.refactor_closing_stock_balance #5
 erpnext.patches.v15_0.update_asset_status_to_work_in_progress
 erpnext.patches.v15_0.rename_manufacturing_settings_field
-erpnext.patches.v15_0.sync_auto_reconcile_config
+erpnext.patches.v15_0.sync_auto_reconcile_config #2025-08-26
 execute:frappe.db.set_single_value("Accounts Settings", "exchange_gain_loss_posting_date", "Payment")
 erpnext.patches.v14_0.disable_add_row_in_gross_profit
 erpnext.patches.v14_0.update_posting_datetime
